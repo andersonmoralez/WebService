@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com" xmlns:intf="http://com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="fun">
+    <complexType>
+     <sequence>
+      <element name="nome" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="funResponse">
+    <complexType>
+     <sequence>
+      <element name="funReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="funResponse">
+
+      <wsdl:part element="impl:funResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="funRequest">
+
+      <wsdl:part element="impl:fun" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Pessoa">
+
+      <wsdl:operation name="fun">
+
+         <wsdl:input message="impl:funRequest" name="funRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:funResponse" name="funResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PessoaSoapBinding" type="impl:Pessoa">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="fun">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="funRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="funResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PessoaService">
+
+      <wsdl:port binding="impl:PessoaSoapBinding" name="Pessoa">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAP/services/Pessoa"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

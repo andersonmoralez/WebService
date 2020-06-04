@@ -1,0 +1,7 @@
+127.0.0.1 - - [04/Jun/2020:14:05:25 -0300] "GET / HTTP/1.1" 404 763
+127.0.0.1 - - [04/Jun/2020:14:05:27 -0300] "POST /SOAP/services/AdminService HTTP/1.0" 200 291
+127.0.0.1 - - [04/Jun/2020:14:05:27 -0300] "POST /SOAP/services/AdminService HTTP/1.0" 200 4072
+127.0.0.1 - - [04/Jun/2020:14:09:30 -0300] "POST /SOAP/services/Pessoa HTTP/1.1" 200 368
+127.0.0.1 - - [04/Jun/2020:14:10:12 -0300] "POST /SOAP/services/Pessoa HTTP/1.1" 200 366
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:14:10:48 -0300] "GET /Soap/Pessoa HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:14:11:09 -0300] "GET /SOAP/Service/Pessoa HTTP/1.1" 404 790
